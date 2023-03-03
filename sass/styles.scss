@@ -1,0 +1,101 @@
+@import 'config';
+@import 'utilities';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $pink;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+}
+
+header {
+    padding: 1em 6em;
+
+    h1 {
+        font-size: 3em;
+        font-family: "Dancing Script", cursive;
+            font-weight: 800;
+
+        span {
+            
+            color: $dark-green;
+        }
+    }
+}
+
+main {
+    padding: 2em 6em;
+    
+}
+
+.nav-item:active {
+    background-color: #000;
+}
+
+// .btn:active {
+//     background-color: #000;
+// }
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2em;
+
+    .category {
+        @include button;
+    }
+
+}
+
+.main-btn {
+    @include button;
+    color: #fff;
+    display: none;
+    background-color: $dark-green;
+    color: #f2f2f2;
+    width: 45%;
+    margin: auto;
+    padding: 1em 0;
+    font-size: 0.75em;
+}
+
+.quote-wrapper {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2.5em;
+    margin-top: 15vh;
+    font-size: 1.25em;
+    
+    .quote-content {
+        border: #16161d 1.5px solid;
+        padding: 1em 3em;
+        border-radius: 0.25em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .5em;
+        width: 50%;
+        margin: auto;
+        box-shadow: 1px 2px 10px #16161d45;
+
+        cite {
+            font-weight: 300;
+            font-size: 0.8em;
+        }
+    }
+}
+
+
+
+
+

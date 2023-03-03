@@ -1,0 +1,14 @@
+@import 'config';
+
+@mixin button {
+    background-color: $light-green;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    cursor: pointer;
+    
+}
+
+button:disabled {
+    color: #f2f2f2;
+}
