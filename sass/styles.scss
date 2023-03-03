@@ -35,13 +35,12 @@ main {
     
 }
 
-.nav-item:active {
-    background-color: #000;
+.active {
+    transform: scale(0.95);
+    background: $dark-green;
 }
 
-// .btn:active {
-//     background-color: #000;
-// }
+
 
 .categories {
     display: flex;
@@ -55,10 +54,10 @@ main {
 
 }
 
-.main-btn {
+.next-btn {
     @include button;
     color: #fff;
-    display: none;
+    display: block;
     background-color: $dark-green;
     color: #f2f2f2;
     width: 45%;
@@ -68,7 +67,7 @@ main {
 }
 
 .quote-wrapper {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
