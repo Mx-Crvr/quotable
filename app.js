@@ -1,20 +1,27 @@
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('.category');
 const author = document.getElementById('author');
 const quote = document.getElementById('quote');
 const nextBtn = document.getElementById('next-btn');
 const quoteWrapper = document.getElementById('quote-wrapper')
 
   for (const button of buttons) {
-  
+    
     button.addEventListener('click', function () {
       buttons.forEach(button => {
         button.classList.remove('active');
+        button.classList.add('category');
         button.disabled = false;
         quoteWrapper.style.display = 'flex';
       });
+      console.log(button.id)
       button.classList.add('active');
+      button.classList.remove('category')
       button.setAttribute('disabled', '')
-  
+      nextBtn.textContent = `New ${button.id} quote`;
+      nextBtn.style.display = 'block';
+      nextBtn.addEventListener('click', updateQuote);
+      updateQuote()
+
       async function updateQuote() {
         let tag = `?tags=${button.id}`;
         const response = await fetch(`https://api.quotable.io/random${tag}`);
@@ -27,26 +34,14 @@ const quoteWrapper = document.getElementById('quote-wrapper')
           quote.textContent = "An error occured";
           console.log(data);
         }
-  
+        
+        
       }
-      updateQuote()
+
     }) 
   
   };
 
 
-// function resetBtn() {
-//   for (const button of buttons) {
-//     button.style.backgroundColor = '#90C26E'
-//   }
-// }
 
 
-
-
-
-
-
- 
-
-   

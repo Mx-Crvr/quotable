@@ -30,6 +30,12 @@ header {
     }
 }
 
+hr {
+    margin: 2em 0;
+    color: $light-green;
+    border: 0.5px solid $dark-green;
+}
+
 main {
     padding: 2em 6em;
     
@@ -88,10 +94,148 @@ main {
 }
 
 .active {
-    @include button;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    cursor: pointer;
     transform: scale(0.90);
     background-color: $dark-green;
 }
 
 
+@media (max-width: 576px) {
+    header {
+        padding: 1em;
+    
+        h1 {
+            font-size: 2em;
+            font-weight: 800;
+            text-align: center;
+        }
+    }
+    
+    main {
+        padding: 1em;  
+    }
+    
+    hr {
+        margin: 2em 0;
+        color: $light-green;
+        border: 0.5px solid $dark-green;
+    }
 
+    .categories {
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+    
+    .next-btn {
+        @include button;
+        color: #fff;
+        display: none;
+        background-color: $dark-green;
+        color: #f2f2f2;
+        width: 45%;
+        margin: auto;
+        padding: 1em 0;
+        font-size: 0.75em;
+    }
+    
+    .quote-wrapper {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 2em;
+        font-size: 0.8em;
+        margin-top: 2em;        
+
+        .quote-content {
+            padding: 1em 1.5em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            margin: auto;
+    
+            cite {
+                font-weight: 300;
+                font-size: 0.8em;
+            }
+        }
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 1em;
+    
+        h1 {
+            font-size: 2em;
+            font-weight: 800;
+            text-align: center;
+        }
+    }
+    
+    main {
+        padding: 1em;  
+    }
+    
+    hr {
+        margin: 2em 0;
+        color: $light-green;
+        border: 0.5px solid $dark-green;
+    }
+
+    .categories {
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+    
+    .next-btn {
+        @include button;
+        color: #fff;
+        display: none;
+        background-color: $dark-green;
+        color: #f2f2f2;
+        width: 45%;
+        margin: auto;
+        padding: 1em 0;
+        font-size: 0.75em;
+    }
+    
+    .quote-wrapper {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 2em;
+        font-size: 0.8em;
+        margin-top: 2em;        
+
+        .quote-content {
+            padding: 1em 1.5em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            margin: auto;
+    
+            cite {
+                font-weight: 300;
+                font-size: 0.8em;
+            }
+        }
+    }
+    
+    .active {
+        border: none;
+        padding: 0.5em 1em;
+        border-radius: 1em;
+        cursor: pointer;
+        transform: scale(0.90);
+        background-color: $dark-green;
+    }
+}
