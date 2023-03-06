@@ -10,5 +10,9 @@
 }
 
 button:disabled {
-    color: #f2f2f2;
+    color: #16161d;
+}
+
+button:active {
+    color: $dark-green;
 }
