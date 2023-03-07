@@ -16,3 +16,15 @@ button:disabled {
 button:active {
     color: $dark-green;
 }
+
+
+@mixin footer {
+    border-top: #16161d74 1px solid;
+    position: fixed;
+    bottom: 0%;
+    left: 40%;
+    padding: 1em 0;
+    color: #16161d;
+    font-weight: 300;
+    
+}

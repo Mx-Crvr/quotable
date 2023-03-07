@@ -71,7 +71,7 @@ main {
     justify-content: center;
     align-items: stretch;
     gap: 2.5em;
-    margin-top: 15vh;
+    margin-top: 10vh;
     font-size: 1.25em;
     
     .quote-content {
@@ -102,6 +102,15 @@ main {
     background-color: $dark-green;
 }
 
+footer {
+    @include footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .italic {
+        font-style: italic;
+    }
+}
 
 @media (max-width: 576px) {
     header {
@@ -148,7 +157,7 @@ main {
         align-items: stretch;
         gap: 2em;
         font-size: 0.8em;
-        margin-top: 2em;        
+        margin-top: 2em;
 
         .quote-content {
             padding: 1em 1.5em;
